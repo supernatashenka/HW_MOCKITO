@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 public class MovieManagerTest {
 
     @Test
-public void ShouldAddFilm(){
+    public void ShouldAddFilm() {
         MovieManager manager = new MovieManager();
         manager.addMovie("Film1");
 
@@ -13,21 +13,21 @@ public void ShouldAddFilm(){
     }
 
     @Test
-    public void ShouldFindAllFilms(){
+    public void ShouldFindAllFilms() {
         MovieManager manager = new MovieManager();
         manager.addMovie("Film1");
         manager.addMovie("Film2");
         manager.addMovie("Film3");
 
 
-        String[] expected = {"Film1","Film2","Film3"};
+        String[] expected = {"Film1", "Film2", "Film3"};
         String[] actual = manager.findAllMovies();
 
         Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
-    public void ShouldShowLast5(){
+    public void ShouldShowLast5() {
         MovieManager manager = new MovieManager();
         manager.addMovie("Film1");
         manager.addMovie("Film2");
@@ -38,7 +38,7 @@ public void ShouldAddFilm(){
         manager.addMovie("Film7");
 
 
-        String[] expected = {"Film7","Film6","Film5","Film4","Film3"};
+        String[] expected = {"Film7", "Film6", "Film5", "Film4", "Film3"};
         String[] actual = manager.findLast();
 
         Assertions.assertArrayEquals(expected, actual);
